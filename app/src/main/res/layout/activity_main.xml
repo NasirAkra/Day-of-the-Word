@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?attr/colorButtonNormal"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/dateTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Date/Time will appear here"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        />
+
+    <TextView
+        android:id="@+id/wordOfDayTextView"
+        style="@style/TextAppearance.WordOfDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/word_of_the_day"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+
+        app:layout_constraintEnd_toEndOf="@+id/dateTimeTextView"
+        app:layout_constraintStart_toStartOf="@+id/dateTimeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/dateTimeTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/favoriteButton"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/add_to_favorites"
+        android:textColor="#3F51B5"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wordOfDayTextView" />
+
+    <TextView
+        android:id="@+id/favoritesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/favorite_words"
+        android:textSize="20sp"
+        style="@style/TextAppearance.FavoritesHeader"
+        app:layout_constraintTop_toBottomOf="@id/favoriteButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/favoritesListTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.FavoritesList"
+        app:layout_constraintTop_toBottomOf="@id/favoritesTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

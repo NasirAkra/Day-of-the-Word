@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Day of the Word</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="favorite_words">Favorite words:</string>
+    <string name="word_of_the_day">Word of the Day</string>
+    <string name="day_of_the_word">Day of the Word</string>
+    <string name="next">Next</string>
+</resources>
